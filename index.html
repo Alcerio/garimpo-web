@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garimpo do Afiliado — Descubra o que vale divulgar na Shopee</title>
+<meta name="description" content="Extensão do Chrome que dá uma nota de 0 a 100 para produtos da Shopee e mostra quais valem a pena divulgar como afiliado.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --verde: #14532d; --ouro: #facc15; --escuro: #12121a; --card: #1c1c28; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #fff;
+    background: var(--escuro); line-height: 1.6; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { text-align: center; padding: 64px 20px 40px; }
+  .logo { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .logo .g { background: var(--verde); color: var(--ouro); width: 52px; height: 52px;
+    border-radius: 14px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 30px; }
+  .logo span { font-size: 22px; font-weight: 700; }
+  h1 { font-size: 38px; line-height: 1.2; margin-bottom: 16px; }
+  h1 .hl { color: var(--ouro); }
+  .sub { font-size: 19px; opacity: .85; max-width: 620px; margin: 0 auto 32px; }
+  .cta { display: inline-block; background: var(--ouro); color: var(--escuro);
+    font-weight: 800; font-size: 17px; padding: 15px 34px; border-radius: 12px;
+    text-decoration: none; }
+  .demo-selo { display: inline-flex; flex-direction: column; gap: 2px; background: var(--verde);
+    padding: 14px 20px; border-radius: 14px; margin-top: 40px; text-align: left; }
+  .demo-selo .n { font-size: 34px; font-weight: 800; }
+  .demo-selo small { opacity: .85; }
+  section { padding: 48px 0; border-top: 1px solid rgba(255,255,255,.08); }
+  h2 { font-size: 27px; margin-bottom: 24px; text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 17px; margin-bottom: 8px; }
+  .card p { opacity: .8; font-size: 15px; }
+  .planos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 620px; margin: 0 auto; }
+  .plano { background: var(--card); border-radius: 16px; padding: 28px; text-align: center; }
+  .plano.pro { border: 2px solid var(--ouro); }
+  .plano .preco { font-size: 32px; font-weight: 800; margin: 10px 0; }
+  .plano ul { list-style: none; text-align: left; margin-top: 16px; }
+  .plano li { padding: 6px 0 6px 26px; position: relative; font-size: 15px; }
+  .plano li::before { content: '✓'; position: absolute; left: 0; color: #4ade80; font-weight: 800; }
+  footer { text-align: center; padding: 40px 20px; opacity: .6; font-size: 14px; }
+  footer a { color: var(--ouro); }
+  .aviso { font-size: 13px; opacity: .6; text-align: center; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo"><span class="g">G</span><span>Garimpo do Afiliado</span></div>
+    <h1>Descubra em segundos <span class="hl">o que vale a pena divulgar</span> na Shopee</h1>
+    <p class="sub">A extensão do Chrome que dá uma nota de 0 a 100 para cada produto —
+    cruzando comissão, desconto, giro de vendas e avaliação — e te diz na hora: divulga ou não.</p>
+    <a class="cta" href="#" id="ctaLoja">⛏️ Instalar grátis</a>
+    <div class="demo-selo">
+      <span class="n">90 🟢</span>
+      <small>Vale divulgar</small>
+      <small>Comissão ~R$ 7,60 · Desconto 55% · 138 mil vendas</small>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Por que os afiliados usam</h2>
+    <div class="grid">
+      <div class="card"><h3>🎯 Nota na hora</h3><p>Abra qualquer produto na Shopee e veja o Score de Garimpo aparecer sozinho no canto.</p></div>
+      <div class="card"><h3>⛏️ Garimpo em massa</h3><p>Faça uma busca e veja o score em cada produto, com o Top 10 dos melhores ranqueado.</p></div>
+      <div class="card"><h3>📋 Pauta pronta</h3><p>Copie a lista dos melhores produtos com um clique, direto para o seu vídeo ou story.</p></div>
+      <div class="card"><h3>🔒 Privacidade</h3><p>Sem anúncios, sem rastreamento, não acessa sua conta da Shopee. Tudo no seu navegador.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Planos</h2>
+    <div class="planos">
+      <div class="plano">
+        <h3>Grátis</h3>
+        <div class="preco">R$ 0</div>
+        <ul>
+          <li>Score ilimitado em qualquer produto</li>
+          <li>Prévia do Top 10</li>
+        </ul>
+      </div>
+      <div class="plano pro">
+        <h3>Pro ⛏️</h3>
+        <div class="preco">R$ 19,90<small>/mês</small></div>
+        <ul>
+          <li>Garimpo completo em buscas e categorias</li>
+          <li>Top 10 inteiro dos melhores</li>
+          <li>Botão Copiar pauta</li>
+          <li>Filtros por comissão e vendas</li>
+        </ul>
+      </div>
+    </div>
+    <p class="aviso">A comissão exibida é uma estimativa por categoria — confirme sempre o valor exato no seu painel de afiliado da Shopee.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Garimpo do Afiliado · <a href="privacy.html">Política de Privacidade</a> · contato: alcerio@gmail.com</p>
+</footer>
+
+</body>
+</html>
