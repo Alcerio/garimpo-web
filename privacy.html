@@ -27,7 +27,7 @@
     <li><b>Páginas da Shopee (shopee.com.br)</b> que você visita: preço, desconto, vendas,
     avaliações e categoria — lidos da própria página para calcular o Score de Garimpo. Esse
     conteúdo não é armazenado nem enviado a terceiros.</li>
-    <li><b>E-mail e senha de login:</b> enviados apenas ao nosso backend (Supabase) para
+    <li><b>E-mail e senha de login:</b> enviados apenas ao nosso próprio servidor (garimpo.rylone.net, via HTTPS) para
     criar e autenticar sua conta e identificar seu plano (grátis ou Pro).</li>
   </ul>
 
@@ -45,8 +45,9 @@
 
   <h2>Armazenamento</h2>
   <p>Seu token de sessão e a preferência de plano ficam no armazenamento local do navegador
-  (<code>chrome.storage.local</code>). Seus dados de conta ficam no backend Supabase,
-  protegidos por regras de acesso (RLS) que garantem que só você acessa os seus.</p>
+  (<code>chrome.storage.local</code>). Seus dados de conta (e-mail, plano e
+  senha — esta guardada apenas como hash criptográfico, nunca em texto) ficam no banco de
+  dados do nosso próprio servidor, e cada sessão só acessa os dados da própria conta.</p>
 
   <h2>Exclusão de dados</h2>
   <p>Para excluir sua conta e dados, envie um e-mail para <a href="mailto:alcerio@gmail.com">alcerio@gmail.com</a>.</p>
