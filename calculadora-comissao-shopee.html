@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Comissão de Afiliado Shopee (grátis) — Garimpo do Afiliado</title>
+<meta name="description" content="Calcule quanto você ganha de comissão como afiliado Shopee: informe o preço do produto e a categoria e veja a comissão por venda e por mês. Grátis, sem cadastro.">
+<link rel="canonical" href="https://alcerio.github.io/garimpo-web/calculadora-comissao-shopee.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Comissão de Afiliado Shopee">
+<meta property="og:description" content="Quanto você ganha por venda e por mês divulgando um produto da Shopee? Calcule em segundos.">
+<meta property="og:url" content="https://alcerio.github.io/garimpo-web/calculadora-comissao-shopee.html">
+<meta property="og:locale" content="pt_BR">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Como é calculada a comissão de afiliado da Shopee?",
+     "acceptedAnswer": {"@type": "Answer", "text": "A comissão é uma porcentagem do valor pago pelo produto. A porcentagem muda conforme a categoria, a campanha e o vendedor. Multiplique o preço pela porcentagem para saber quanto você ganha por venda."}},
+    {"@type": "Question", "name": "Qual categoria da Shopee paga mais comissão para afiliado?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Em geral, beleza, cuidados pessoais e moda têm as porcentagens mais altas. Eletrônicos, celulares e informática costumam ter as mais baixas. Confirme sempre o valor no seu painel de afiliado."}},
+    {"@type": "Question", "name": "Produto caro dá mais comissão que produto barato?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Por venda, sim. Mas produto barato com muito desconto costuma vender muito mais. O que importa é a comissão por venda vezes quantas vendas você consegue."}},
+    {"@type": "Question", "name": "Os valores da calculadora são oficiais?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Não. As porcentagens são estimativas por categoria e você pode editá-las. O valor exato de cada produto aparece no seu painel do Programa de Afiliados Shopee."}}
+  ]
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --verde: #14532d; --ouro: #facc15; --escuro: #12121a; --card: #1c1c28; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #fff;
+    background: var(--escuro); line-height: 1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  .topo { padding: 20px 0; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
+  .logo .g { background: var(--verde); color: var(--ouro); width: 36px; height: 36px;
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 20px; }
+  .logo span { font-weight: 700; }
+  h1 { font-size: 32px; line-height: 1.2; margin: 24px 0 12px; }
+  h1 .hl { color: var(--ouro); }
+  .sub { opacity: .85; margin-bottom: 28px; }
+  .calc { background: var(--card); border-radius: 16px; padding: 24px; }
+  .campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  label { display: block; font-size: 13px; opacity: .75; margin-bottom: 6px; }
+  input, select { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #333;
+    background: var(--escuro); color: #fff; font-size: 16px; }
+  .resultado { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-top: 22px; }
+  .res { background: var(--verde); border-radius: 12px; padding: 16px; text-align: center; }
+  .res small { display: block; opacity: .8; font-size: 13px; }
+  .res b { font-size: 28px; }
+  .nota { font-size: 12px; opacity: .6; margin-top: 14px; }
+  section { padding: 40px 0; border-top: 1px solid rgba(255,255,255,.08); margin-top: 40px; }
+  section + section { margin-top: 0; }
+  h2 { font-size: 24px; margin-bottom: 16px; }
+  h3 { font-size: 17px; margin: 20px 0 6px; }
+  p { opacity: .88; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td, th { padding: 9px 10px; border-bottom: 1px solid rgba(255,255,255,.08); text-align: left; }
+  td:last-child, th:last-child { text-align: right; }
+  th { opacity: .7; font-weight: 600; font-size: 13px; }
+  .cta-box { background: var(--card); border: 2px solid var(--ouro); border-radius: 16px; padding: 26px; text-align: center; }
+  .cta-box p { margin-bottom: 18px; }
+  .cta { display: inline-block; background: var(--ouro); color: var(--escuro); font-weight: 800;
+    font-size: 17px; padding: 14px 30px; border-radius: 12px; text-decoration: none; }
+  footer { text-align: center; padding: 40px 20px; opacity: .6; font-size: 14px; }
+  footer a { color: var(--ouro); }
+  @media (max-width: 480px) { h1 { font-size: 26px; } .res b { font-size: 24px; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topo"><a class="logo" href="./"><span class="g">G</span><span>Garimpo do Afiliado</span></a></div>
+
+  <h1>Calculadora de <span class="hl">comissão de afiliado Shopee</span></h1>
+  <p class="sub">Informe o preço do produto e a categoria para ver quanto você ganha por venda e por mês. É grátis e não precisa de cadastro.</p>
+
+  <div class="calc">
+    <div class="campos">
+      <div>
+        <label for="preco">Preço do produto (R$)</label>
+        <input id="preco" type="number" inputmode="decimal" min="0" step="0.01" value="49.90">
+      </div>
+      <div>
+        <label for="categoria">Categoria</label>
+        <select id="categoria"></select>
+      </div>
+      <div>
+        <label for="pct">Comissão (%) — edite se souber a sua</label>
+        <input id="pct" type="number" inputmode="decimal" min="0" max="100" step="0.5">
+      </div>
+      <div>
+        <label for="vendas">Vendas por mês que você espera</label>
+        <input id="vendas" type="number" inputmode="numeric" min="0" step="1" value="30">
+      </div>
+    </div>
+    <div class="resultado">
+      <div class="res"><small>Você ganha por venda</small><b id="porVenda">—</b></div>
+      <div class="res"><small>Você ganha por mês</small><b id="porMes">—</b></div>
+      <div class="res"><small>Vendas para ganhar R$ 1.000</small><b id="paraMil">—</b></div>
+    </div>
+    <p class="nota">As porcentagens são estimativas por categoria. A comissão real muda por produto, campanha e vendedor. Confirme sempre no seu painel do Programa de Afiliados Shopee.</p>
+  </div>
+
+  <section>
+    <div class="cta-box">
+      <h2>Quer saber quais produtos valem a pena antes de divulgar?</h2>
+      <p>O Garimpo do Afiliado é uma extensão grátis do Chrome que dá uma nota de 0 a 100 para cada produto da Shopee, cruzando comissão, desconto, vendas e avaliação.</p>
+      <a class="cta" href="https://chromewebstore.google.com/detail/garimpo-do-afiliado/eiaeaofjdpnmkjfocpcmpcedamlhofhn" target="_blank" rel="noopener">⛏️ Instalar grátis no Chrome</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Como a comissão de afiliado Shopee é calculada</h2>
+    <p>A comissão é uma porcentagem do valor que o cliente paga pelo produto. A conta é simples:</p>
+    <p style="margin:14px 0;font-size:18px"><b>comissão = preço × porcentagem da categoria</b></p>
+    <p>Um produto de R$ 49,90 em uma categoria de 14% rende cerca de R$ 6,99 por venda. Com 30 vendas no mês, são cerca de R$ 209,58.</p>
+
+    <h3>Produto caro ou produto barato?</h3>
+    <p>Produto caro rende mais por venda, mas produto barato com bom desconto costuma vender muito mais. Quem ganha mais é quem escolhe produtos que juntam boa comissão, desconto real e muitas vendas.</p>
+
+    <h3>Por que a comissão que eu recebi foi diferente?</h3>
+    <p>A porcentagem varia por campanha e por vendedor, e algumas lojas pagam comissão extra. Pedido cancelado ou devolvido também não gera comissão.</p>
+  </section>
+
+  <section>
+    <h2>Comissão estimada por categoria</h2>
+    <table>
+      <thead><tr><th>Categoria</th><th>Comissão estimada</th></tr></thead>
+      <tbody id="tabela"></tbody>
+    </table>
+    <p class="nota">Estimativas de faixas públicas (2026). Não são valores oficiais da Shopee.</p>
+  </section>
+
+  <section>
+    <h2>Perguntas frequentes</h2>
+    <h3>Qual categoria paga mais comissão?</h3>
+    <p>Beleza, cuidados pessoais e moda costumam ter as porcentagens mais altas. Eletrônicos, celulares e informática costumam ter as mais baixas.</p>
+    <h3>Os valores da calculadora são oficiais?</h3>
+    <p>Não. São estimativas por categoria, e você pode editar a porcentagem. O valor exato de cada produto aparece no seu painel de afiliado.</p>
+    <h3>Como descubro rápido se um produto vale a pena?</h3>
+    <p>Com a extensão <a href="./" style="color:var(--ouro)">Garimpo do Afiliado</a>: abra um produto na Shopee e a nota aparece sozinha no canto da tela.</p>
+  </section>
+</div>
+
+<footer>
+  <p><a href="./">Garimpo do Afiliado</a> · <a href="privacy.html">Política de Privacidade</a> · Site independente, sem vínculo com a Shopee.</p>
+</footer>
+
+<script>
+  // Mesma tabela da extensão (app/config/comissoes.js), com nomes legíveis
+  const CATEGORIAS = [
+    ['Beleza e maquiagem', 20], ['Cuidados pessoais e higiene', 18], ['Moda feminina e masculina', 18],
+    ['Moda infantil', 16], ['Bolsas, mochilas e carteiras', 16], ['Acessórios de moda e bijuterias', 16],
+    ['Saúde e suplementos', 15], ['Calçados', 15], ['Casa e decoração', 14], ['Cozinha e utensílios', 14],
+    ['Cama, mesa e banho', 14], ['Bebês e maternidade', 13], ['Relógios', 12], ['Brinquedos e hobbies', 12],
+    ['Papelaria e escritório', 12], ['Esporte e fitness', 12], ['Pet', 12], ['Automotivo', 10],
+    ['Ferramentas e jardim', 10], ['Mercado e bebidas', 8], ['Áudio (fones e caixas de som)', 8],
+    ['Eletrônicos e games', 6], ['Celulares e informática', 5], ['Outra categoria', 10]
+  ];
+  const $ = id => document.getElementById(id);
+  const brl = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+  CATEGORIAS.forEach(([nome, pct], i) => {
+    $('categoria').add(new Option(`${nome} (~${pct}%)`, i));
+    if (i < CATEGORIAS.length - 1) $('tabela').insertAdjacentHTML('beforeend', `<tr><td>${nome}</td><td>~${pct}%</td></tr>`);
+  });
+  $('categoria').value = 9;   // Cozinha: exemplo do texto
+  $('pct').value = CATEGORIAS[9][1];
+
+  function calcular() {
+    const preco = parseFloat($('preco').value) || 0;
+    const pct = parseFloat($('pct').value) || 0;
+    const vendas = parseInt($('vendas').value, 10) || 0;
+    const porVenda = preco * pct / 100;
+    $('porVenda').textContent = brl(porVenda);
+    $('porMes').textContent = brl(porVenda * vendas);
+    $('paraMil').textContent = porVenda > 0 ? Math.ceil(1000 / porVenda).toLocaleString('pt-BR') : '—';
+  }
+  $('categoria').addEventListener('change', () => { $('pct').value = CATEGORIAS[$('categoria').value][1]; calcular(); });
+  ['preco', 'pct', 'vendas'].forEach(id => $(id).addEventListener('input', calcular));
+  calcular();
+</script>
+</body>
+</html>
