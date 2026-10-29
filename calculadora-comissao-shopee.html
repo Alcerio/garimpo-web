@@ -33,7 +33,8 @@
   body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #fff;
     background: var(--escuro); line-height: 1.6; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-  .topo { padding: 20px 0; }
+  .topo { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .topo nav a { color: #fff; opacity: .75; text-decoration: none; font-size: 14px; margin-left: 16px; }
   .logo { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
   .logo .g { background: var(--verde); color: var(--ouro); width: 36px; height: 36px;
     border-radius: 10px; display: flex; align-items: center; justify-content: center;
@@ -73,7 +74,8 @@
 <body>
 
 <div class="wrap">
-  <div class="topo"><a class="logo" href="./"><span class="g">G</span><span>Garimpo do Afiliado</span></a></div>
+  <div class="topo"><a class="logo" href="./"><span class="g">G</span><span>Garimpo do Afiliado</span></a>
+    <nav><a href="guias.html">Guias</a><a href="calculadora-comissao-shopee.html">Calculadora</a></nav></div>
 
   <h1>Calculadora de <span class="hl">comissão de afiliado Shopee</span></h1>
   <p class="sub">Informe o preço do produto e a categoria para ver quanto você ganha por venda e por mês. É grátis e não precisa de cadastro.</p>
@@ -147,7 +149,7 @@
 </div>
 
 <footer>
-  <p><a href="./">Garimpo do Afiliado</a> · <a href="privacy.html">Política de Privacidade</a> · Site independente, sem vínculo com a Shopee.</p>
+  <p><a href="./">Garimpo do Afiliado</a> · <a href="guias.html">Guias</a> · <a href="privacy.html">Política de Privacidade</a> · Site independente, sem vínculo com a Shopee.</p>
 </footer>
 
 <script>
