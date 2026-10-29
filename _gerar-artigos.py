@@ -285,6 +285,7 @@ CTA = f'''  <div class="cta-box">
     <h2>Descubra em segundos o que vale divulgar</h2>
     <p>O Garimpo do Afiliado é uma extensão grátis do Chrome que dá uma nota de 0 a 100 para cada produto da Shopee.</p>
     <a class="cta" href="{LOJA}" target="_blank" rel="noopener">⛏️ Instalar grátis no Chrome</a>
+    <p style="font-size:13px;opacity:.6;margin:14px 0 0">💻 Funciona no Chrome do computador. Está no celular? Abra este site no PC para instalar.</p>
   </div>
 '''
 
