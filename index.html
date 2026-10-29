@@ -12,12 +12,13 @@
   body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #fff;
     background: var(--escuro); line-height: 1.6; }
   .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-  .menu { max-width: 880px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between;
-    align-items: center; gap: 12px; flex-wrap: wrap; }
-  .menu nav a { color: #fff; opacity: .75; text-decoration: none; font-size: 14px; margin-left: 16px; }
-  .menu nav a:hover { opacity: 1; }
-  header { text-align: center; padding: 40px 20px 40px; }
-  .logo { display: inline-flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+  header { text-align: center; padding: 64px 20px 40px; }
+  header .wrap { position: relative; }
+  .menu { position: absolute; top: 15px; right: 20px; }
+  .menu a { color: #fff; opacity: .75; text-decoration: none; font-size: 14px; margin-left: 16px; }
+  .menu a:hover { opacity: 1; }
+  @media (max-width: 760px) { header { padding-top: 20px; } .menu { position: static; text-align: right; margin-bottom: 28px; } }
+  .logo { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; }
   .logo .g { background: var(--verde); color: var(--ouro); width: 52px; height: 52px;
     border-radius: 14px; display: flex; align-items: center; justify-content: center;
     font-weight: 800; font-size: 30px; }
@@ -56,13 +57,10 @@
 </head>
 <body>
 
-<div class="menu">
-  <a class="logo" href="./"><span class="g">G</span><span>Garimpo do Afiliado</span></a>
-  <nav><a href="guias.html">Guias</a><a href="calculadora-comissao-shopee.html">Calculadora</a></nav>
-</div>
-
 <header>
   <div class="wrap">
+    <nav class="menu"><a href="guias.html">Guias</a><a href="calculadora-comissao-shopee.html">Calculadora</a></nav>
+    <div class="logo"><span class="g">G</span><span>Garimpo do Afiliado</span></div>
     <h1>Descubra em segundos <span class="hl">o que vale a pena divulgar</span> na Shopee</h1>
     <p class="sub">A extensão do Chrome que dá uma nota de 0 a 100 para cada produto —
     cruzando comissão, desconto, giro de vendas e avaliação — e te diz na hora: divulga ou não.</p>
