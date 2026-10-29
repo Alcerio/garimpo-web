@@ -34,6 +34,7 @@
     background: var(--escuro); line-height: 1.6; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
   .topo { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .topo nav .atual { color: var(--ouro); font-size: 14px; margin-left: 16px; }
   .topo nav a { color: #fff; opacity: .75; text-decoration: none; font-size: 14px; margin-left: 16px; }
   .logo { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
   .logo .g { background: var(--verde); color: var(--ouro); width: 36px; height: 36px;
@@ -44,7 +45,7 @@
   h1 .hl { color: var(--ouro); }
   .sub { opacity: .85; margin-bottom: 28px; }
   .calc { background: var(--card); border-radius: 16px; padding: 24px; }
-  .campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .campos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   label { display: block; font-size: 13px; opacity: .75; margin-bottom: 6px; }
   input, select { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #333;
     background: var(--escuro); color: #fff; font-size: 16px; }
@@ -68,14 +69,14 @@
     font-size: 17px; padding: 14px 30px; border-radius: 12px; text-decoration: none; }
   footer { text-align: center; padding: 40px 20px; opacity: .6; font-size: 14px; }
   footer a { color: var(--ouro); }
-  @media (max-width: 480px) { h1 { font-size: 26px; } .res b { font-size: 24px; } }
+  @media (max-width: 480px) { .campos { grid-template-columns: 1fr; } h1 { font-size: 26px; } .res b { font-size: 24px; } }
 </style>
 </head>
 <body>
 
 <div class="wrap">
   <div class="topo"><a class="logo" href="./"><span class="g">G</span><span>Garimpo do Afiliado</span></a>
-    <nav><a href="guias.html">Guias</a><a href="calculadora-comissao-shopee.html">Calculadora</a></nav></div>
+    <nav><a href="guias.html">Guias</a><span class="atual">Calculadora</span></nav></div>
 
   <h1>Calculadora de <span class="hl">comissão de afiliado Shopee</span></h1>
   <p class="sub">Informe o preço do produto e a categoria para ver quanto você ganha por venda e por mês. É grátis e não precisa de cadastro.</p>

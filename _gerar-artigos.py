@@ -213,6 +213,7 @@ CSS = '''
     background: var(--escuro); line-height: 1.7; }
   .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
   .topo { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .topo nav .atual { color: var(--ouro); font-size: 14px; margin-left: 16px; }
   .topo nav a { color: #fff; opacity: .75; text-decoration: none; font-size: 14px; margin-left: 16px; }
   .logo { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
   .logo .g { background: var(--verde); color: var(--ouro); width: 36px; height: 36px;
@@ -247,8 +248,9 @@ CSS = '''
   @media (max-width: 480px) { h1 { font-size: 26px; } article p, article li { font-size: 16px; } }
 '''
 
-def pagina(titulo_tag, desc, url, corpo, extra_head=''):
+def pagina(titulo_tag, desc, url, corpo, extra_head='', atual=''):
     e = html.escape
+    nav = '<span class="atual">Guias</span>' if atual == 'guias' else '<a href="guias.html">Guias</a>'
     return f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -268,7 +270,7 @@ def pagina(titulo_tag, desc, url, corpo, extra_head=''):
 <div class="wrap">
   <div class="topo">
     <a class="logo" href="./"><span class="g">G</span><span>Garimpo do Afiliado</span></a>
-    <nav><a href="guias.html">Guias</a><a href="calculadora-comissao-shopee.html">Calculadora</a></nav>
+    <nav>{nav}<a href="calculadora-comissao-shopee.html">Calculadora</a></nav>
   </div>
 {corpo}
 </div>
@@ -320,7 +322,7 @@ corpo_guias = f'''  <h1>Guias para afiliados Shopee</h1>
 with open('guias.html', 'w', encoding='utf-8', newline='\n') as f:
     f.write(pagina('Guias para afiliados Shopee — Garimpo do Afiliado',
                    'Guias práticos para afiliados Shopee: como escolher produto para divulgar, comissão por categoria, achadinhos que vendem e quanto dá para ganhar.',
-                   BASE + 'guias.html', corpo_guias))
+                   BASE + 'guias.html', corpo_guias, atual='guias'))
 
 urls = ['', 'calculadora-comissao-shopee.html', 'guias.html'] + [a['slug'] + '.html' for a in ARTIGOS] + ['privacy.html']
 with open('sitemap.xml', 'w', encoding='utf-8', newline='\n') as f:
