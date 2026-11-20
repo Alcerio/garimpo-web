@@ -55,13 +55,18 @@
   footer { text-align: center; padding: 40px 20px; opacity: .6; font-size: 14px; }
   footer a { color: var(--ouro); }
   .aviso { font-size: 13px; opacity: .6; text-align: center; margin-top: 20px; }
+  html { scroll-behavior: smooth; }
+  #contato:target { animation: destaque 1.6s ease-out; }
+  #contato:target .cta { animation: pulso .5s ease-in-out 3; }
+  @keyframes destaque { from { background: rgba(250,204,21,.18); } to { background: transparent; } }
+  @keyframes pulso { 50% { transform: scale(1.07); } }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <nav class="menu"><a href="guias.html">Guias</a><a href="calculadora-comissao-shopee.html">Calculadora</a></nav>
+    <nav class="menu"><a href="guias.html">Guias</a><a href="calculadora-comissao-shopee.html">Calculadora</a><a href="#contato">Contato</a></nav>
     <div class="logo"><span class="g">G</span><span>Garimpo do Afiliado</span></div>
     <h1>Descubra em segundos <span class="hl">o que vale a pena divulgar</span> na Shopee</h1>
     <p class="sub">A extensão do Chrome que dá uma nota de 0 a 100 para cada produto —
@@ -137,5 +142,13 @@
   <p>Garimpo do Afiliado · <a href="calculadora-comissao-shopee.html">Calculadora de comissão Shopee</a> · <a href="guias.html">Guias para afiliados</a> · <a href="privacy.html">Política de Privacidade</a> · <a href="#contato">Contato</a></p>
 </footer>
 
+<script>
+document.querySelectorAll('a[href="#contato"]').forEach(a=>a.addEventListener('click',e=>{
+  const c=document.getElementById('contato');
+  if(location.hash==='#contato'){e.preventDefault();c.style.animation='none';c.querySelector('.cta').style.animation='none';
+    void c.offsetWidth;c.style.animation='';c.querySelector('.cta').style.animation='';}
+  c.scrollIntoView({behavior:'smooth',block:'center'});
+}));
+</script>
 </body>
 </html>
