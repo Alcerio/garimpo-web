@@ -2,7 +2,7 @@
 # Rodar: python _gerar-artigos.py  (dentro de garimpo-afiliado-web). Editar o texto AQUI, não no HTML.
 import html, json
 
-BASE = 'https://alcerio.github.io/garimpo-web/'
+BASE = 'https://shopprospector.com.br/'
 LOJA = 'https://chromewebstore.google.com/detail/garimpo-do-afiliado/eiaeaofjdpnmkjfocpcmpcedamlhofhn'
 DATA = '2026-10-28'
 
