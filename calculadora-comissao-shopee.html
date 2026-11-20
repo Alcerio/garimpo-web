@@ -2,6 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="/icone-128.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calculadora de Comissão de Afiliado Shopee (grátis) — Garimpo do Afiliado</title>
 <meta name="description" content="Calcule quanto você ganha de comissão como afiliado Shopee: informe o preço do produto e a categoria e veja a comissão por venda e por mês. Grátis, sem cadastro.">
@@ -176,9 +178,9 @@
   $('pct').value = CATEGORIAS[9][1];
 
   function calcular() {
-    const preco = parseFloat($('preco').value) || 0;
-    const pct = parseFloat($('pct').value) || 0;
-    const vendas = parseInt($('vendas').value, 10) || 0;
+    const preco = Math.max(0, parseFloat($('preco').value) || 0);
+    const pct = Math.min(100, Math.max(0, parseFloat($('pct').value) || 0));
+    const vendas = Math.max(0, parseInt($('vendas').value, 10) || 0);
     const porVenda = preco * pct / 100;
     $('porVenda').textContent = brl(porVenda);
     $('porMes').textContent = brl(porVenda * vendas);

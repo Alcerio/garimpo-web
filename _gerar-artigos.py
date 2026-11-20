@@ -172,7 +172,7 @@ ARTIGOS = [
 <p>Sem saber quanto rende por venda, não dá para saber se vale a pena. Use a <a href="calculadora-comissao-shopee.html">calculadora de comissão</a> e veja <a href="quanto-ganha-afiliado-shopee.html">quanto ganha um afiliado Shopee</a>.</p>
 
 <h2>O atalho para os erros 1, 2, 4 e 6</h2>
-<p>A extensão <a href="./">Garimpo do Afiliado</a> dá uma nota de 0 a 100 para cada produto da Shopee, cruzando comissão, desconto, vendas e avaliação. Você abre uma busca e ela já mostra os 10 melhores. A escolha que levava uma tarde passa a levar alguns minutos.</p>
+<p>A extensão <a href="./">Garimpo do Afiliado</a> dá uma nota de 0 a 100 para cada produto da Shopee, cruzando comissão, desconto, vendas e avaliação. Você abre uma busca e ela já ranqueia os 10 melhores. A escolha que levava uma tarde passa a levar alguns minutos.</p>
 ''',
   },
   {
@@ -255,6 +255,8 @@ def pagina(titulo_tag, desc, url, corpo, extra_head='', atual=''):
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="/icone-128.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(titulo_tag)}</title>
 <meta name="description" content="{e(desc)}">

@@ -2,8 +2,12 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="/icone-128.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de Privacidade — Garimpo do Afiliado</title>
+<meta name="description" content="Política de privacidade da extensão Garimpo do Afiliado: quais dados são tratados, onde ficam e como excluir sua conta.">
+<link rel="canonical" href="https://shopprospector.com.br/privacy.html">
 <style>
   body { font-family: system-ui, sans-serif; color: #1a1a1a; max-width: 760px;
     margin: 0 auto; padding: 40px 20px; line-height: 1.65; }
@@ -16,42 +20,48 @@
 </head>
 <body>
   <h1>Política de Privacidade — Garimpo do Afiliado</h1>
-  <p class="data">Última atualização: 08/11/2026</p>
+  <p class="data">Última atualização: 20/11/2026</p>
 
-  <p class="resumo"><b>Resumo:</b> a extensão não coleta, não vende e não compartilha dados
-  pessoais para fins comerciais. O único dado pessoal tratado é o e-mail usado para criar
-  sua conta (login), armazenado com segurança no nosso provedor de backend.</p>
+  <p class="resumo"><b>Resumo:</b> a extensão não vende, não compartilha e não usa seus dados
+  para anúncios. Os únicos dados pessoais tratados são o e-mail da sua conta (login) e, se você
+  assinar o Pro, o e-mail usado no pagamento — guardados no nosso próprio servidor.</p>
 
   <h2>O que a extensão acessa</h2>
   <ul>
     <li><b>Páginas da Shopee (shopee.com.br)</b> que você visita: preço, desconto, vendas,
     avaliações e categoria — lidos da própria página para calcular o Score de Garimpo. Esse
-    conteúdo não é armazenado nem enviado a terceiros.</li>
+    conteúdo <b>não é enviado</b> ao nosso servidor nem a terceiros.</li>
     <li><b>E-mail e senha de login:</b> enviados apenas ao nosso próprio servidor (via HTTPS) para
     criar e autenticar sua conta e identificar seu plano (grátis ou Pro).</li>
-    <li><b>Estatísticas de uso da extensão</b>: quando você faz uma análise, atinge o limite
-    diário do plano grátis ou clica para assinar o Pro, nosso servidor registra só o tipo do
-    evento, a data/hora e a versão da extensão, ligados à sua conta. <b>Não</b> registramos
-    quais produtos você vê, preços ou links. Usamos isso apenas para melhorar a extensão.</li>
+    <li><b>Estatísticas de uso da extensão</b>: quando você faz uma análise, abre o painel Top 10
+    (no máximo uma vez por dia), atinge o limite diário do plano grátis ou clica para assinar o
+    Pro, nosso servidor registra só o tipo do evento, a data/hora e a versão da extensão, ligados
+    à sua conta. <b>Não</b> registramos quais produtos você vê, preços ou links. Usamos isso
+    apenas para melhorar a extensão.</li>
   </ul>
 
   <h2>O que a extensão NÃO faz</h2>
   <ul>
-    <li>Não coleta CPF, endereço, telefone ou dados além do e-mail de login.</li>
+    <li>Não coleta CPF, endereço ou telefone.</li>
     <li>Não acessa sua conta da Shopee nem seu painel de afiliado.</li>
     <li>Não rastreia sua navegação fora da Shopee.</li>
     <li>Não exibe anúncios. Não vende nem compartilha dados para fins comerciais.</li>
   </ul>
 
   <h2>Pagamento</h2>
-  <p>A assinatura do plano Pro é processada pelo <b>Mercado Pago</b> em ambiente próprio
-  dele. A extensão não vê nem armazena dados do seu cartão.</p>
+  <p>O plano Pro (assinatura no cartão ou Pix de 30 dias) é processado pelo <b>Mercado Pago</b>,
+  em ambiente próprio dele. A extensão não vê nem armazena dados do seu cartão ou da sua conta
+  bancária. Guardamos apenas o e-mail informado como pagador e a situação do pagamento, para
+  liberar o seu plano.</p>
 
   <h2>Armazenamento</h2>
-  <p>Seu token de sessão e a preferência de plano ficam no armazenamento local do navegador
-  (<code>chrome.storage.local</code>). Seus dados de conta (e-mail, plano e
-  senha — esta guardada apenas como hash criptográfico, nunca em texto) ficam no banco de
-  dados do nosso próprio servidor, e cada sessão só acessa os dados da própria conta.</p>
+  <p>No seu navegador (<code>chrome.storage.local</code>) ficam: o token de sessão, o plano
+  atual, a contagem de análises do dia (com os códigos dos produtos analisados, para aplicar o
+  limite do plano grátis), as notas dos produtos que você já abriu (por até 7 dias) e os seus
+  filtros. Esses dados ficam só no seu computador. No nosso próprio servidor ficam seus dados de
+  conta (e-mail, plano, e-mail do pagador e senha — esta guardada apenas como hash
+  criptográfico, nunca em texto) e as estatísticas de uso descritas acima; cada sessão só acessa
+  os dados da própria conta.</p>
 
   <h2>Exclusão de dados</h2>
   <p>Para excluir sua conta e dados, envie um e-mail para <a href="mailto:contato@shopprospector.com.br">contato@shopprospector.com.br</a>.</p>
